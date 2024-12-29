@@ -1,0 +1,90 @@
+body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: rgb(167, 212, 119);
+
+       
+      font-family: Arial, sans-serif;
+    }
+    
+    
+    
+
+   .card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  background: rgb(255, 232, 147);
+  background-image: url('https://img.freepik.com/free-vector/forest-scene-with-hiking-track-many-trees_1308-54526.jpg?semt=ais_hybrid'); /* Replace with your image path */
+  background-size: cover; /* This will cover the entire card */
+  background-position: center; /* This will center the image */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  
+}
+
+
+    .image-container {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      overflow: hidden;
+      cursor: pointer;
+      animation: shake 1.5s infinite, dangle 2s infinite ease-in-out;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 8px;
+    }
+
+    .image-container img {
+      width: 70%;
+      height: 70%;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+
+    .image-container:hover img {
+      transform: scale(1.5);
+    }
+
+    .image-container:active {
+      transform: translateY(5px);
+    }
+
+    @keyframes shake {
+      0%, 100% {
+        transform: translate(0, 0);
+      }
+      25% {
+        transform: translate(1px, -1px);
+      }
+      50% {
+        transform: translate(-1px, 1px);
+      }
+      75% {
+        transform: translate(1px, 1px);
+      }
+    }
+
+    @keyframes dangle {
+      0% {
+        transform: rotate(0deg);
+      }
+      25% {
+        transform: rotate(3deg);
+      }
+      50% {
+        transform: rotate(-3deg);
+      }
+      75% {
+        transform: rotate(2deg);
+      }
+      100% {
+        transform: rotate(0deg);
+      }
+    }
